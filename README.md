@@ -1,4 +1,4 @@
-# Student grade Tracker
+# Student grade tracker
 A lightweight CLI student gradebook and performance analyzer written in Python. Stores all data locally on your machine in a `.json` file.
 
 For your information, this python script is a personal mini project done by the author. It is not recognized by any school, university or government sector. 
