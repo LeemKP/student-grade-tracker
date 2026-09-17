@@ -70,11 +70,11 @@ python student_grade.py
 ---
 
 ## Features
-* Student & Subject Management: Add or remove students and subjects dynamically.
-* Score Tracking: Input marks across multiple terms (Test 1, Test 2, and Final exams).
-* Automated Statistics: Calculates individual averages, letter grades (A+ to Fail) and overall class averages.
-* Performance Insights: Identifies top performers, subject rankings and students requiring improvement per subject.
-* Yearly Archiving: Persists data locally via `students.json` and automatically archives historical records when the calendar yeara advances.
+* **Student & Subject Management:** Add or remove students and subjects dynamically.
+* **Score Tracking:** Input marks across multiple terms (Test 1, Test 2, and Final exams).
+* **Automated Statistics:** Calculates individual averages, letter grades (A+ to Fail) and overall class averages.
+* **Performance Insights:** Identifies top performers, subject rankings and students requiring improvement per subject.
+* **Yearly Archiving:** Persists data locally via `students.json` and automatically archives historical records when the calendar yeara advances.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
