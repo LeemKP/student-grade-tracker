@@ -36,22 +36,22 @@ Unfortunately, the author does not have any experience with MacOS 🥲. But as l
 ---
 
 ## How to Run
-1. Download the expenses_tracker.py file from this repository.
+1. Download the student_grade.py file from this repository.
 2. Open your machine's terminal (PowerShell/Ubuntu/so on).
-3. Navigate to the folder containing `expenses_tracker.py`.
+3. Navigate to the folder containing `student_grade.py`.
 4. Copy the path of the folder and paste it in your terminal like this.
 
 Windows (PowerShell)
 ```powershell
-#For example, I saved `expenses_tracker.py` in Downloads.
+#For example, I saved `student_grade.py` in Downloads.
 cd C:\Users\User\Downloads
 ```
 Ubuntu/WSL:
 ```bash
-#For example, I saved `expenses_tracker.py` in Downloads.
+#For example, I saved `student_grade.py` in Downloads.
 cd /mnt/c/Users/User/Downloads 
 
-#Or I saved `expenses_tracker.py` in mamba's environment.
+#Or I saved `student_grade.py` in mamba's environment.
 cd path
 ```
 5. Launch the script:
