@@ -709,7 +709,8 @@ def option_5():
                         test_list = list(student_archive[selected_year]["results"].keys())
                         selected_test = student_archive[selected_year]["results"][test_list[idx_test]]# Test_1 dictionary
                         excluded_name = {'class_average','total_student','top_student'}
-                        if len(selected_test.values()) > 0:
+                        actual_students = {k:v for k,v in selected_test.items() if k not in excluded_name}
+                        if actual_students:
                             print()
                             print(f"-"*60)
                             print(f"{test_list[idx_test]:^60}")
@@ -717,15 +718,23 @@ def option_5():
                             print(f"-"*60)
                             print(f"{'No.':<5}{'Student name':<20}{'Average score':^17}{'Grade':^9}")
                             print(f"-"*60)
-                            counter = 0
-                            for name,info in selected_test.items():
-                                if name not in excluded_name:
-                                    counter += 1
-                                    print(f"{counter:<5}{name:<20}{info.get("Average"):^17}{info.get("Grade"):^9}")
+                            total_marks = 0
+                            top_student = ""
+                            highest_avg = -1.0
+                            for counter, (name,info) in enumerate(actual_students.items(),start = 1):
+                                avg = info.get("Average",0.0)
+                                grade = info.get("Grade","")
+                                print(f"{counter:<5}{name:<20}{avg:^17}{grade:^9}")
+
+                                total_marks += avg
+                                if avg>highest_avg:
+                                    highest_avg = avg
+                                    top_student = name
+                            class_avg = total_marks / len(actual_students) if actual_students else 0.0
                             print(f"-"*60)
-                            print(f"Total student : {selected_test.get("total_student")}")
-                            print(f"Class average : {selected_test.get("class_average")}")
-                            print(f"Top student   : {selected_test.get("top_student")}")
+                            print(f"Total student : {len(actual_students)}")
+                            print(f"Class average : {class_avg:.2f}")
+                            print(f"Top student   : {top_student} with {highest_avg:.2f} average mark")
                             print()
                         else:
                             print(f"\nNo historical data for {test_list[idx_test]}")
