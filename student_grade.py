@@ -578,7 +578,7 @@ def option_4():
                     excluded = {"Average","Grade"}
                     print()
                     print(f"-"*60)
-                    print(f"{'Best scrorer':^60}")
+                    print(f"{'Best scorer':^60}")
                     print(f"-"*60)
                     print(f"{'Subject':<20}{'Student name':<20}{'Score':^9}")
                     print(f"-"*60)
@@ -592,26 +592,26 @@ def option_4():
                                     elif subject in rank_set:
                                         rank_set[subject].update({name:marks})
                     for subject,info in rank_set.items():
-                        top_scrorer = ""
+                        top_scorer = ""
                         best_mark = 0
                         for name,mark in info.items():
                             if mark > best_mark:
                                 best_mark = mark
-                                top_scrorer = name  
-                        print(f"{subject:<20}{top_scrorer:<20}{best_mark:^9}")
+                                top_scorer = name  
+                        print(f"{subject:<20}{top_scorer:<20}{best_mark:^9}")
                     print(f"-"*60)
                     print(f"{'Student required improvement':^60}")
                     print(f"-"*60)
                     print(f"{'Subject':<20}{'Student name':<20}{'Score':^9}")
                     print(f"-"*60)
                     for subject,info in rank_set.items():
-                        least_scrorer = ""
+                        least_scorer = ""
                         least_mark = 100
                         for name,mark in info.items():
                             if mark < least_mark:
                                 least_mark = mark
-                                least_scrorer = name
-                        print(f"{subject:<20}{least_scrorer:<20}{least_mark:^9}")
+                                least_scorer = name
+                        print(f"{subject:<20}{least_scorer:<20}{least_mark:^9}")
                     print(f"-"*60)
             else:
                 print(f"\nInvalid prompt! Please select from (1-4).")
